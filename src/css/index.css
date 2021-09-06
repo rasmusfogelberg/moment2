@@ -1,5 +1,5 @@
 #index {
-    background-color: beige;
+    background-color: lightpink;
 }
 
 #index h1 {
@@ -7,5 +7,6 @@
 }
 
 #index p {
-    font-size: 1rem;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }

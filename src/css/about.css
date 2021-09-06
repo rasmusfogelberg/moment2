@@ -1,11 +1,13 @@
 main#about {
-    background-color: grey;
+    display: grid;
+    background-color: lightgrey;
+    grid-template-columns: 1fr;
 }
 
 #about h1 {
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 #about p {
-    font-size: 4rem;
+    font-size: 1.5rem;
 }
