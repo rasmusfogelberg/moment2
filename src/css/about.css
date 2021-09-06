@@ -1,0 +1,11 @@
+main#about {
+    background-color: grey;
+}
+
+#about h1 {
+    font-size: 2rem;
+}
+
+#about p {
+    font-size: 4rem;
+}

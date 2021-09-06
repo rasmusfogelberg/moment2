@@ -1,0 +1,1 @@
+console.log("This is a console log from the first JavaScript file!"),console.log("This is a console log from the second JavaScript file!"),console.log("This Console log is from the the third JS file");
