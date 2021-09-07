@@ -4,7 +4,7 @@
   "description": "Practice assignment for using Gulp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "gulp"
   },
   "author": "Rasmus Fogelberg",
   "license": "ISC",
