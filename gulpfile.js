@@ -3,6 +3,7 @@ const concat = require('gulp-concat');
 const terser = require('gulp-terser');
 const cssnano = require('gulp-cssnano');
 const imagemin = require('gulp-imagemin');
+const browserSync = require('browser-sync').create();
 
 // Search paths
 const files = {
@@ -31,7 +32,8 @@ function cssTask() {
     return src(files.cssPath)
     .pipe(concat('style.css'))
     .pipe(cssnano())
-    .pipe(dest('pub/css'));
+    .pipe(dest('pub/css'))
+    .pipe(browserSync.stream());
 }
 
 // image-task, minimize images
@@ -43,7 +45,12 @@ function imageTask() {
 
 // Watcher
 function watchTask() {
-    watch([files.htmlPath, files.jsPath, files.cssPath, files.imagePath], parallel(copyHTML, jsTask, cssTask, imageTask));
+
+    browserSync.init({
+        server: "./pub"
+    });
+
+    watch([files.htmlPath, files.jsPath, files.cssPath, files.imagePath], parallel(copyHTML, jsTask, cssTask, imageTask)).on('change', browserSync.reload);
 }
 
 exports.default = series (
