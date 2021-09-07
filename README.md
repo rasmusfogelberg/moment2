@@ -9,8 +9,9 @@ En stor fördel med automatiseringsprocessen är att man inte behöver göra så
 De paket som användes till Gulp är följande:
 * **Gulp concat** - "Slår samman" flera CSS- eller JS-filer till varsin CSS- eller JS-fil.
 * **Gulp terser** - Gör JS-kod så liten som möjligt (storleksmässigt). Ju mindre filer desto snabbare laddas det. Eftersom själva arbetsfiler inte förminskas behåller de struktur (radbrytningar, mellanrum osv) men filen som laddas till publiceringsmappen inte behöver arbetas med av utvecklaren gör det inget om radbrytningar mm försvinner. Det gör även kod mer svårläst om man inte vill att besökare ska kunna läsa koden.
-* **Gulp cssnano** - Samma sak som terser men för CSS-kod istället
-* **Gulp imagemin** - Förminskar bilders storlek som läggs till i publiceringsmappen
+* **Gulp cssnano** - Samma sak som terser men för CSS-kod istället.
+* **Gulp imagemin** - Förminskar bilders storlek som läggs till i publiceringsmappen.
+* **BrowserSync** - Öppnar HTML-filer i webbläsare och uppdaterar dem i realtid. När utvecklaren sparar ändringar i HTML, CSS och JS-filer uppdateras webbsidan direkt.
 
 ## Systemet
 En traditionell mapp-struktur användes för arbetsfiler (dvs. de filer som ligger i sourcemappen). I varje mapp finns minst 2 filer för att dela upp CSS- och JS-kod enligt uppgiftensbeskrivning. Därefter används Gulp för att sammanfoga dessa filer och kopiera alla filer till en publiceringsmapp kallad "pub". För att klona ner uppgiftens filer från github, använd följande kommando i terminal:
